@@ -7,6 +7,7 @@ body {
 #navbar {
    display: flex;
    width: 100vw;
+   height: 150px;
    background-color: rgb(2, 58, 21);
    margin: auto;
 }
@@ -23,7 +24,7 @@ body {
    /* margin-left: 50vw; */
    text-align: center;
    width: 50vw;
-   padding: 30px;
+   padding: 20px;
    font-size: 20px;
    font-family: "Roboto", sans-serif;
 }
@@ -41,7 +42,9 @@ body {
 }
 #hjem {
    background-color: rgb(2, 58, 21);
-   display: flex;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
    color: white;
    font-size: 20px;
    font-family: "Roboto", sans-serif;

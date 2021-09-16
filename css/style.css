@@ -4,35 +4,59 @@
 body {
    font-size: 1em;
 }
-#navbar {
-   display: flex;
+#container {
+   background-color: rgb(2, 58, 21);
+   /* width: 100vw; */
+}
+.hjemme-grid {
    width: 100vw;
-   height: 150px;
-   background-color: #195205;
-   margin: auto;
+   max-width: 1360px;
+   margin: 0 auto;
+   display: grid;
+   gap: 10px;
+   grid-template-columns: 1fr 1fr;
+
+   grid-template-rows: 150px 2fr;
+   grid-template-areas:
+      "navbar      navbar "
+      "hjemme-side hjemme-side-img";
+}
+.navbar {
+   grid-area: navbar;
+   padding: 20px;
+}
+.hjemme-side {
+   grid-area: hjemme-side;
+   color: white;
+   padding: 0 20px;
+   margin: 0 20px;
+}
+.hjemme-side-img {
+   grid-area: hjemme-side-img;
 }
 
 .logo-holder {
-   padding-bottom: 10px;
-   width: 50vw;
+   flex-grow: 1;
+   align-items: left;
 }
 .logo-holder a > img {
-   width: 20vw;
+   width: 200px;
 }
 
 .nav-item {
-   /* margin-left: 50vw; */
-   text-align: center;
-   width: 50vw;
-   padding: 20px;
+   display: flex;
+   flex-direction: row;
+   align-items: right;
+   justify-content: space-between;
+
+   padding: 10px 20px;
    font-size: 20px;
    font-family: "Roboto", sans-serif;
 }
 
-.nav-item li {
-   padding: 30px;
-   display: inline-flex;
-   top: 20px;
+.nav-item > li {
+   padding: 20px;
+
    list-style: none;
 }
 .nav-item a {
@@ -40,34 +64,18 @@ body {
 
    text-decoration: none;
 }
-#hjem {
-   background-color: #195205;
-   display: grid;
-   grid-template-columns: 1fr 1fr;
 
-   color: white;
-   font-size: 20px;
-   font-family: "Roboto", sans-serif;
-   width: 100vw;
-   /* height: 100vh; */
-
-   padding: 20px;
-}
-
-.hjemme-side {
-   /* position: absolute; */
-
-   width: 50vw;
-
-   padding: 0 30px;
-}
 .hjemme-head {
    font-size: 3em;
-}
-.hjemme-side h2,
-p {
    line-height: 1;
-   padding: 10px;
+   padding: 0 20px;
+}
+
+.hjemme-side > p {
+   line-height: 1;
+   padding: 20px;
+   font-size: 1em;
+   font-family: "Roboto", sans-serif;
 }
 
 .pink {
@@ -77,23 +85,15 @@ p {
 .medlem {
    text-decoration: none;
    text-align: left;
-   color: #195205;
+   color: rgb(2, 58, 21);
    background: white;
    padding: 10px 50px;
    border-radius: 10px;
-   margin: 20px 10px;
+   font-size: 1.5em;
+   margin: 20px 20px;
 }
 .medlem:hover {
-   background-color: rgb(240, 156, 150);
-}
-.hjemme-side-img {
-   /* position: absolute; */
-   top: 20vh;
-   object-fit: none;
-   /* width: 50vw; */
-   /*margin-left: 50vw;
-   height: 80vh; */
-   /* background-image: url(../images/home.jpg); */
+   background-color: rgb(255, 230, 226);
 }
 
 .hjemme-side-img > img {
@@ -104,77 +104,95 @@ p {
 
 #politikk {
    font-family: Arial, Helvetica, sans-serif;
-   margin-top: 20px;
+   margin: 20px;
    font-size: 1.5em;
+   /* width: 100vw;
+   max-width: 1360px; */
    /* height: 100vh; */
-   /* width: 100vw; */
    color: white;
+}
+.områder-head {
+   width: 100vw;
+   max-width: 1360px;
+   margin: 0 auto;
+   color: rgb(2, 58, 21);
+   padding: 20px;
+}
+
+.områder-main {
+   /* padding: 10px; */
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   /* grid-gap: 10px; */
 }
 
 .områder {
-   padding: 10px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-gap: 30px;
-}
-
-.områder-1 {
    height: 350px;
    width: 275px;
-   background-color: #195205;
+   background-color: rgb(255, 230, 226);
+   color: rgb(2, 58, 21);
    line-height: 1.5;
    padding: 20px;
    margin: 10px;
+   /* justify-self: center; */
 }
 #politikk > h2 {
    padding: 20px;
-   margin-top: 20px;
+   /* margin: 20px; */
    color: rgb(2, 58, 21);
 }
 /* Partiet */
 
 #partiet {
    font-family: Arial, Helvetica, sans-serif;
-   width: 100vw;
-   height: 100vh;
    color: rgb(2, 58, 21);
 }
+
 .parti-head {
-   width: 100vw;
-   font-size: 1.5em;
+   font-size: 2em;
    padding: 20px;
 }
-.parti-img {
-   border-radius: 100px;
-   position: absolute;
-   padding: 20px 100px;
-   left: 10px;
-   width: 50vw;
-   background: rgb(255, 230, 226);
+.parti-main {
+   /* height: 100vh; */
+   width: 100%;
+   max-width: 1360px;
+   /* min-height: 930px; */
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 30px;
 }
 
-td > img {
-   width: 200px;
+.parti-img-head {
+   display: grid;
+   grid-template-columns: 300px 300px;
+   grid-template-rows: 300px 300px;
+   border-radius: 20px;
+   /* background-color: rgb(255, 230, 226); */
+}
+.parti-img {
+   /* justify-items: center; */
+
+   /* background-color: white; */
+}
+
+.parti-img > img {
+   /* object-fit: cover; */
+   width: 250px;
 }
 
 .parti-padding {
-   position: absolute;
-   width: 50vw;
-
-   margin-left: 50vw;
    padding: 20px;
 }
 .parti-para {
    font-size: 1.5em;
-   width: 500px;
-   margin-left: 55vw;
-   padding: 0 30px;
+   font-family: "Roboto", sans-serif;
+   /* padding: 20px; */
 }
 
 .parti-ul {
    font-size: 1.5em;
-   width: 500px;
-   margin-left: 55vw;
    padding: 0 30px;
    line-height: 1.5em;
 }
@@ -188,16 +206,55 @@ td > img {
    font-family: Arial, Helvetica, sans-serif;
    font-size: 20px;
 
-   background: #195205;
+   background: rgb(2, 58, 21);
    width: 100vw;
+}
+.kontakt-main {
+   width: 100vw;
+   max-width: 1360px;
    height: 100vh;
+   margin: 0 auto;
+   display: grid;
+   gap: "30px";
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 2fr 1fr;
+   grid-template-areas:
+      "kontakt-head form"
+      "address   form"
+      "foot      foot";
 }
 .kontakt-head {
-   padding: 40px;
+   padding: 20px;
+   margin: 10px;
+   grid-area: kontakt-head;
+}
+.nyhet {
+   text-decoration: none;
+   text-align: left;
+   color: rgb(2, 58, 21);
+   background: white;
+   padding: 10px 20px;
+   font-size: 24px;
+   /* border-radius: 10px; */
+   /* margin: 20px 10px; */
+}
+.nyhet:hover {
+   background-color: rgb(255, 230, 226);
+}
+.form {
+   padding: 20px;
+   margin: 10px;
+   grid-area: form;
+}
+input {
+   display: block;
+   padding: 10px;
+   margin: 20px;
 }
 
 .address {
-   padding: 50px 30px;
+   padding: 20px;
+   grid-area: address;
 }
 .address p {
    line-height: 1.5em;
@@ -206,6 +263,7 @@ td > img {
 .foot {
    color: white;
    text-align: center;
+   grid-area: foot;
 }
 
 .social-icon {

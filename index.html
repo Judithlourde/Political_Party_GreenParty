@@ -2,93 +2,92 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>GrønnParti</title>
-      <!-- Link to Favicon -->
-      <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
-      <!--Links to CSS-->
 
+      <!--Links to CSS-->
       <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/variables.css" />
       <link rel="stylesheet" href="css/style.css" />
-      <!-- Links to Font Awesome (For the social icons) -->
-      <script
-         defer
-         src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
-      ></script>
+
       <!-- Links to Fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
          href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&family=Roboto:wght@400&display=swap"
          rel="stylesheet"
       />
    </head>
+
    <body>
       <div class="wrapper">
-         <!-- Hjemme -->
-         <section id="container">
-            <div class="hjemme-grid">
-               <div class="navbar">
+         <!-- Home-Section -->
+         <section id="home">
+            <div class="home-grid">
+               <nav class="navbar">
                   <ul class="nav-item">
                      <li class="logo-holder">
-                        <a href="#hjem">
+                        <a href="#home">        <!-- link to the home section  -->
                            <img src="assets/images/logo.png" alt="Logo" />
                         </a>
                      </li>
 
-                     <li><a href="#hjem">Hjem</a></li>
-                     <li><a href="#områder">Politikk</a></li>
-                     <li><a href="#partiet">Partiet</a></li>
-                     <li><a href="#kontakt">Kontakt oss</a></li>
-                  </ul>
-               </div>
+                     <li><a href="#home">Hjem</a></li>         <!-- link to the home section -->         
 
-               <div class="hjemme-side">
-                  <h2 class="hjemme-head">
+                     <li><a href="#area">Politikk</a></li>        <!-- link to the area section -->
+
+                     <li><a href="#party">Partiet</a></li>        <!-- link to the party section -->
+
+                     <li><a href="#contact">Kontakt oss</a></li>        <!-- link to the contact section -->
+                  </ul>
+               </nav>
+
+               <div class="home-side">
+                  <h2 class="home-head">
                      Ingen er perfekte, men alle kan gjøre litt. Sammen kan vi
                      endre
                      <span class="pink"> norsk politikk</span> for alltid.
                   </h2>
+
                   <p>
                      Vi er her for å stanse klima- og naturkrisa, med politikk
                      som er bra for mennesker og miljø.Miljøpartiet De Grønne
                      vil skape et samfunn hvor vi har gode liv uten at vi
                      ødelegger for andre. Bli med på den grønne bølgen du også!
                   </p>
+
                   <br />
-                  <a class="medlem" href="#kontakt">Bli Medlem</a>
+
+                  <a class="member" href="#contact">Bli Medlem</a>         <!-- link to the contact section for membership form -->
                </div>
 
-               <div class="hjemme-side-img">
-                  <img src="assets/images/home1.jpg" alt="Politikker-Image" />
+               <div class="home-img">
+                  <img src="assets/images/home1.jpg" alt="politicians-image" />
                </div>
             </div>
          </section>
 
-         <!-- Områder -->
-         <section id="områder">
-            <div class="områder-container">
-               <div class="områder-head">
-                  <h2>Politikkområder</h2>
-               </div>
+         <!-- Area-Section -->
 
-               <div class="områder-main">
-                  <div class="områder">
+         <section id="area">
+            <div class="container-area">
+               <header class="area-head">
+                  <h2>Politikkområder</h2>
+               </header>
+
+               <main class="area-main">
+                  <div class="areas">
                      <h3>Klimahandling nå!</h3>
-                     <img
-                        src="assets/images/klima.png"
-                        alt="Klima-endring-bilde"
-                     />
+                     
+                     <img src="assets/images/klima.png" alt="environment-changing-image"/>
+
                      <p>
                         Klimaendringene er den støste krisen står overfor. Skal
                         vi begrense noen av de verste konsekevensene.
                      </p>
                   </div>
 
-                  <div class="områder">
+                  <div class="areas">
                      <h3>Norske Gode Byer</h3>
-                     <img src="assets/images/sykkel.png" alt="Sykkel-bilde" />
+
+                     <img src="assets/images/sykkel.png" alt="cycle-image" />
 
                      <p>
                         I byene finnes mye av løsningen på klimakrisa. Norske
@@ -96,9 +95,10 @@
                      </p>
                   </div>
 
-                  <div class="områder">
+                  <div class="areas">
                      <h3>Natur og dyr på jorda!</h3>
-                     <img src="assets/images/dyr-bilde.png" alt="sopp-bilde" />
+
+                     <img src="assets/images/dyr-bilde.png" alt="mushroom-image" />
 
                      <p>
                         Menneskene er en del naturen og avhengig av mangfoldet
@@ -106,54 +106,58 @@
                      </p>
                   </div>
 
-                  <div class="områder">
+                  <div class="areas">
                      <h3>Trygg og god oppvekst</h3>
-                     <img src="assets/images/barn-bilde.png" alt="Barn-bilde" />
+
+                     <img src="assets/images/barn-bilde.png" alt="kid-image" />
 
                      <p>
                         Alle barn har rett til en god start i livet. Barndommen
                         har egenverdi samtidig legger den grunnlaget.
                      </p>
                   </div>
-               </div>
+               </main>
             </div>
-            <!-- <div class="link-home">
-               <a href="#hjem">Hjem</a>
-            </div>  -->
          </section>
-         <!-- Partiet -->
-         <section id="partiet">
-            <div class="parti-container">
-               <h2 class="parti-head">Om De Grønne</h2>
-               <div class="parti-main">
-                  <div class="parti-img-head">
-                     <div class="parti-img">
+
+         <!-- Party-Section -->
+         <section id="party">
+            <main class="container-party">
+               <h2 class="party-head">Om De Grønne</h2>
+
+               <div class="party-main">
+                  <div class="party-img-head">
+                     <div class="party-img">
                         <img
-                           src="assets/images/grønne1.png"
-                           alt="Politikker-bilde"
+                           src="assets/images/green1.png"
+                           alt="politician-image"
                         />
                      </div>
-                     <div class="parti-img">
+
+                     <div class="party-img">
                         <img
-                           src="assets/images/grønne4.png"
-                           alt="Politikker-bilde"
+                           src="assets/images/green4.png"
+                           alt="politician-image"
                         />
                      </div>
-                     <div class="parti-img">
+
+                     <div class="party-img">
                         <img
-                           src="assets/images/grønne2.png"
-                           alt="Politikker-bilde"
+                           src="assets/images/green2.png"
+                           alt="politician-image"
                         />
                      </div>
-                     <div class="parti-img">
+
+                     <div class="party-img">
                         <img
-                           src="assets/images/grønne3.png"
-                           alt="Politikker-bilde"
+                           src="assets/images/green3.png"
+                           alt="politician-image"
                         />
                      </div>
                   </div>
-                  <div calss="parti-padding">
-                     <p class="parti-para">
+
+                  <div calss="party-padding">
+                     <p class="party-text">
                         Vi er her for å stanse klima og naturkrise, med politikk
                         som er bra for mennesker og miljø. Lorem ipsum dolor sit
                         amet consectetur adipisicing elit. Aliquam ea illo,
@@ -167,30 +171,36 @@
                         laboriosam.
                      </p>
 
-                     <ul class="parti-ul">
+                     <ul class="party-ul">
                         <li>Landsmøte</li>
+
                         <li>Lansstyret</li>
+                        
                         <li>Sentralstyret</li>
+                        
                         <li>Arbeidsutvalget</li>
+                        
                         <li>Sekretariatet</li>
                      </ul>
                   </div>
                </div>
-            </div>
+            </main>
          </section>
-         <!-- Kontakt -->
-         <section id="kontakt">
-            <div class="kontakt-main">
-               <div class="kontakt-head">
-                  <a href="">
+
+         <!-- Contact-Section -->
+
+         <section id="contact">
+            <div class="container-contact">
+               <header class="contact-head">
+                  <a href="#hjem">
                      <img
                         class="logo-foot"
                         src="assets/images/logo1.png"
-                        alt="Logo"
+                        alt="logo"
                      />
                   </a>
-               </div>
-               <div class="form">
+               </header>
+               <main class="form">
                   <h2>VIL DU VITE MER?</h2>
                   <br />
 
@@ -206,46 +216,65 @@
                            placeholder=""
                            autocomplete="off"
                            required
-                     /></label>
-                     <label for="etternavn">
-                        Etternavn
-                        <input type="text" name="etternavn"
-                     /></label>
-                     <label for="e-post">
-                        E-post address
-                        <input type="email" name="e-post"
-                     /></label>
+                        />
+                     <label for="etternavn">Etternavn</label>
 
-                     <label for="submit">
-                        <input
-                           class="nyhet"
-                           type="submit"
-                           name="submit"
-                           value="Meld meg på nyhetsbrevet!"
-                     /></label>
+                     <input type="text" name="etternavn"/>
+
+                     <label for="e-post">E-post address</label>
+
+                     <input type="email" name="e-post"/>
+
+                     <label for="submit"></label>
+
+                     <input
+                        class="news"
+                        type="submit"
+                        name="submit"
+                        value="Meld meg på nyhetsbrevet!"
+                     />
                   </form>
-               </div>
+               </main>
 
-               <div class="address">
+               <aside class="address">
                   <ul>
                      <li>Grønnpartiet</li>
+
                      <li>Hausmanns gata 19, 0182 Oslo</li>
+
                      <li>E-post: Gp@gmail.com</li>
+
                      <li>Telefon: 22 33 44 55</li>
+
                      <li>Donasjoner:</li>
+
                      <li>Kontornummer: 123456789</li>
+
                      <li>Vipps-nummer: 1222</li>
                   </ul>
-               </div>
+               </aside>
 
-               <div class="foot">
-                  <i class="social-icon fab fa-facebook-f"></i>
-                  <i class="social-icon fab fa-twitter"></i>
-                  <i class="social-icon fab fa-instagram"></i>
-                  <i class="social-icon fas fa-envelope"></i>
+               <footer class="foot">
                   <hr class="seperator" />
+
+                  <span>
+                     <img src="assets/images/facebook-icon.jpg" alt="facebook-icon"/>
+                  </span>
+
+                  <span>
+                     <img src="assets/images/twitter-icon.jpg" alt="twitter-icon"/>
+                  </span>
+
+                  <span>
+                     <img src="assets/images/youtube-icon.jpg" alt="youtube-icon"/>
+                  </span>
+
+                  <span>
+                     <img src="assets/images/instagram-icon.jpg" alt="instagram-icon"/>
+                  </span>
+
                   <p>© Designed by JudithPeter</p>
-               </div>
+               </footer>
             </div>
          </section>
       </div>

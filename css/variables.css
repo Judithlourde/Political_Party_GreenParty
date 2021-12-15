@@ -1,5 +1,8 @@
 :root {
-   --point: 20px;
-   --background: rgb(2, 58, 21);
-   --color: #fff;
+   --points: 20px;
+   --dark-green: rgb(2, 58, 21);
+   --white: #fff;
+   --dark-pink: rgb(240, 156, 150);
+   --light-pink: rgb(255, 230, 226);
+   --font: "Roboto", sans-serif;
 }
